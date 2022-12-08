@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danny Barnes</title>
+    <script
+      src="https://kit.fontawesome.com/04ffca717e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- First Section -->
+    <section class="section-1" id="section-1">
+      <div class="section1-container">
+        <h2 class="fadeIn">Danny Barnes</h2>
+        <p class="fadeIn">Liverpool UK</p>
+      </div>
+
+      <!-- Scroll Animation -->
+      <a class="delay" href="#section-2">
+        <div class="mouse-wrap">
+          <div class="mouse">
+            <div class="frame">
+              <svg
+                version="1.1"
+                id="mouse"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 54.9 91"
+                style="enable-background: new 0 0 54.9 91"
+                xml:space="preserve"
+              >
+                <path
+                  id="XMLID_173_"
+                  class="st0"
+                  linejoin="round"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  d="M27.4,3.6L27.4,3.6C14.2,3.6,3.5,14.3,3.5,27.5v36c0,13.2,10.7,23.9,23.9,23.9h0
+          c13.2,0,23.9-10.7,23.9-23.9v-36C51.4,14.3,40.7,3.6,27.4,3.6z"
+                />
+              </svg>
+            </div>
+
+            <div class="mouse-left">
+              <svg
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 27.4 91"
+                style="enable-background: new 0 0 27.4 91"
+                xml:space="preserve"
+              >
+                <path
+                  linejoin="round"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  class="Draw-Frame Animate-Draw"
+                  d="M27.4,87.5L27.4,87.5c-13.2,0-23.9-10.7-23.9-23.9v-36c0-13.2,10.7-23.9,23.9-23.9h0"
+                />
+              </svg>
+            </div>
+
+            <div class="mouse-right">
+              <svg
+                version="1.1"
+                id="Layer_2"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 27.4 91"
+                style="enable-background: new 0 0 27.4 91"
+                xml:space="preserve"
+              >
+                <path
+                  linejoin="round"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  class="Draw-Frame Animate-Draw"
+                  d="M0,3.6L0,3.6c13.2,0,23.9,10.7,23.9,23.9v36c0,13.2-10.7,23.9-23.9,23.9h0"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+    </section>
+    <!--  -->
+
+    <!-- Second Section/Music Player -->
+    <section class="section-2" id="section-2">
+      <div class="player">
+        <!-- Define the section for displaying details -->
+        <div class="details">
+          <h2>Take A Listen..</h2>
+          <div class="now-playing">PLAYING x OF y</div>
+          <div class="track-art"></div>
+          <div class="track-name">Track Name</div>
+          <div class="track-artist">Track Artist</div>
+        </div>
+
+        <!-- Define the section for displaying track buttons -->
+        <div class="buttons">
+          <div class="prev-track" onclick="prevTrack()">
+            <i class="fa fa-step-backward fa-2x"></i>
+          </div>
+          <div class="playpause-track" onclick="playpauseTrack()">
+            <i class="fa fa-play-circle fa-5x"></i>
+          </div>
+          <div class="next-track" onclick="nextTrack()">
+            <i class="fa fa-step-forward fa-2x"></i>
+          </div>
+        </div>
+
+        <!-- Define the section for displaying the seek slider-->
+        <div class="slider_container">
+          <div class="current-time">00:00</div>
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+          <div class="total-duration">00:00</div>
+        </div>
+
+        <!-- Define the section for displaying the volume slider-->
+        <div class="slider_container">
+          <i class="fa fa-volume-down"></i>
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="99"
+            class="volume_slider"
+            onchange="setVolume()"
+          />
+          <i class="fa fa-volume-up"></i>
+        </div>
+      </div>
+    </section>
+    <!--  -->
+
+    <!-- Third Section -->
+    <section class="section-3" id="section-3">
+      <h2>Section 3</h2>
+    </section>
+    <!--  -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"></script>
+
+    <script src="script/app.js"></script>
+  </body>
+</html>
